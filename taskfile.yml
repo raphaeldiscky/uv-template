@@ -1,0 +1,50 @@
+version: "3"
+
+tasks:
+  install_tools:
+    desc: Install all dependencies for the project
+    cmds:
+      - chmod +x ./scripts/install-tools.sh
+      - ./scripts/install-tools.sh
+
+  update_deps:
+    desc: Update all dependencies to their latest versions
+    cmds:
+      - uv sync --upgrade
+
+  ci:
+    desc: Run Github Actions CI pipeline locally
+    cmds:
+      - act -n
+
+  add:
+    desc: Add a new package to the project
+    cmds:
+      - uv add {{.PACKAGE}}
+    requires:
+      vars: [PACKAGE]
+
+  add_dev:
+    desc: Add a new package to the project as a development dependency
+    cmds:
+      - uv add --dev {{.PACKAGE}}
+    requires:
+      vars: [PACKAGE]
+
+  test:
+    desc: Run all tests with verbose output or a specific test file
+    vars:
+      FILE: "{{.FILE}}"
+    cmds:
+      - uv run pytest {{if .FILE}}tests/test_{{.FILE}}.py{{else}}-v{{end}}
+
+  format:
+    desc: Run code formatting and remove unused imports using Ruff
+    cmds:
+      - uv run ruff check --select I,F401 --fix
+      - uv run ruff format
+
+  lint:
+    desc: Run linting using Pyrefly
+    cmds:
+      - uv run pyrefly check

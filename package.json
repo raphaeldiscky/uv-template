@@ -1,0 +1,28 @@
+{
+  "name": "uv-template",
+  "version": "1.0.0",
+  "description": "",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaeldiscky/uv-template.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raphaeldiscky/uv-template/issues"
+  },
+  "homepage": "https://github.com/raphaeldiscky/uv-template#readme",
+  "devDependencies": {
+    "@commitlint/cli": "19.8.1",
+    "@commitlint/config-conventional": "19.8.1",
+    "@commitlint/types": "^20.3.1",
+    "husky": "9.1.7"
+  }
+}

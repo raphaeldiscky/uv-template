@@ -1,0 +1,23 @@
+*.pyc
+
+# Packages
+/dist/*
+__pycache__/
+
+# Unit test / coverage reports
+.coverage
+.pytest_cache
+.pycache
+
+.DS_Store
+.idea/*
+.python-version
+.vscode/*
+
+/docs/site/*
+.mypy_cache
+
+.venv
+
+node_modules
+.husky
