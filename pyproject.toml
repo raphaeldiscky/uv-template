@@ -21,3 +21,25 @@ dev = [
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/example", "src/my_package"]
+
+
+[tool.ruff]
+line-length = 90
+indent-width = 2
+
+[tool.ruff.lint]
+select = ["I", "F401", "E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+line-ending = "auto"
+skip-magic-trailing-comma = false
+
+[tool.pyrefly]
+project_includes = ["**/*"]
+project_excludes = [
+    "**/.[!/.]*",
+    "**/*venv/**/*",
+]
