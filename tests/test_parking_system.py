@@ -3,7 +3,7 @@ import unittest
 from example.parking_system import ParkingSystem
 
 
-# test using unittest
+# test using unittests
 class TestParkingSystem(unittest.TestCase):
   def test_addCar(self) -> None:
     # instance of ParkingSystem named ps / object created from constructor
