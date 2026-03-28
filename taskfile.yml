@@ -11,11 +11,7 @@ tasks:
     desc: Update all dependencies to their latest versions
     cmds:
       - uv sync --upgrade
-
-  ci:
-    desc: Run Github Actions CI pipeline locally
-    cmds:
-      - act -n
+      - pnpm update
 
   add:
     desc: Add a new package to the project
