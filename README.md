@@ -16,3 +16,4 @@ task install_tools
 - **[astral-sh/ruff](https://github.com/astral-sh/ruff)** - An extremely fast Python linter and code formatter, written in Rust
 - **[facebook/pyrefly](https://github.com/facebook/pyrefly)** - A fast type checker, written in Rust
 - **[pytest-dev/pytest](https://github.com/pytest-dev/pytest)** - Python testing framework
+- **[duriantaco/skylos](https://github.com/duriantaco/skylos)** - A static analysis tool for dead code detection and security scanning
