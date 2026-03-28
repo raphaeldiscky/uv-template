@@ -26,5 +26,11 @@ jobs:
       - name: Lint
         run: uv run pyrefly check
 
+      - name: Dead Code Check
+        run: uv run skylos . --gate
+
+      - name: Security Check
+        run: uv run skylos . --danger --secrets --gate
+
       - name: Test
         run: uv run pytest -v

@@ -16,6 +16,8 @@ __pycache__/
 
 /docs/site/*
 .mypy_cache
+.ruff_cache
+.skylos_cache
 
 .venv
 
