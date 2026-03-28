@@ -16,6 +16,7 @@ dependencies = [
 dev = [
     "pyrefly>=0.47.0",
     "pytest>=9.0.2",
+    "pytest-xdist>=3.8.0",
     "ruff>=0.14.11",
     "skylos>=4.1.4",
 ]
@@ -37,6 +38,9 @@ indent-style = "space"
 docstring-code-format = true
 line-ending = "auto"
 skip-magic-trailing-comma = false
+
+[tool.pytest.ini_options]
+addopts = "-n auto"
 
 [tool.pyrefly]
 project_includes = ["**/*"]
