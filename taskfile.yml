@@ -48,3 +48,13 @@ tasks:
     desc: Run linting using Pyrefly
     cmds:
       - uv run pyrefly check
+
+  deadcode:
+    desc: Detect dead code using Skylos
+    cmds:
+      - uv run skylos . --gate
+
+  security:
+    desc: Run security analysis using Skylos
+    cmds:
+      - uv run skylos . --danger --secrets --gate

@@ -17,6 +17,7 @@ dev = [
     "pyrefly>=0.47.0",
     "pytest>=9.0.2",
     "ruff>=0.14.11",
+    "skylos>=4.1.4",
 ]
 
 [tool.hatch.build.targets.wheel]
