@@ -28,11 +28,16 @@ tasks:
       vars: [PACKAGE]
 
   test:
-    desc: Run all tests with verbose output or a specific test file
+    desc: Run tests (cached via testmon, only re-runs affected tests)
     vars:
       FILE: "{{.FILE}}"
     cmds:
-      - uv run pytest {{if .FILE}}tests/test_{{.FILE}}.py{{else}}-v{{end}}
+      - uv run pytest --testmon {{if .FILE}}tests/test_{{.FILE}}.py{{else}}-v{{end}}
+
+  test:all:
+    desc: Run all tests without cache (full run)
+    cmds:
+      - uv run pytest -v
 
   format:
     desc: Run code formatting and remove unused imports using Ruff

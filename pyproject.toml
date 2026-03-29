@@ -16,6 +16,7 @@ dependencies = [
 dev = [
     "pyrefly>=0.47.0",
     "pytest>=9.0.2",
+    "pytest-testmon>=2.1.0",
     "pytest-xdist>=3.8.0",
     "ruff>=0.14.11",
     "skylos>=4.1.4",
